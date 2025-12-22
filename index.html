@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnityMUN</title>
+
+<style>
+body{margin:0;font-family:Arial;background:#000;color:#D4AF37}
+a{text-decoration:none;color:#D4AF37}
+nav{background:#0d0d0d;padding:15px 10%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #D4AF37}
+.logo{font-size:26px;font-weight:bold}
+.menu-icon{font-size:30px;cursor:pointer}
+.menu{display:none;position:absolute;top:70px;right:10%;background:#111;border:1px solid #D4AF37;width:220px}
+.menu a{display:block;padding:12px;border-bottom:1px solid #333;font-weight:bold}
+.menu a:hover{background:#D4AF37;color:#000}
+.hero{text-align:center;padding:120px 10%;background:linear-gradient(#000,#111)}
+section{padding:60px 10%}
+footer{background:#0d0d0d;text-align:center;padding:20px;border-top:2px solid #D4AF37}
+</style>
+
+<script>
+function toggleMenu(){
+ const m=document.getElementById("menu");
+ m.style.display=m.style.display==="block"?"none":"block";
+}
+</script>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">UnityMUN</div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="menu" id="menu">
+<a href="committees.html">Committees</a>
+<a href="schedule.html">Schedule</a>
+<a href="apply.html">Apply</a>
+<a href="team.html">Meet the Team</a>
+<a href="contact.html">Contact</a>
+<a href="captures.html">MUN Captures</a>
+</div>
+
+<section class="hero">
+<h1>UnityMUN 2025/26</h1>
+<p>Diplomacy. Leadership. Unity.</p>
+</section>
+
+<section>
+<h2>Welcome to UnityMUN</h2>
+<p>A student-led Model United Nations conference empowering future leaders.</p>
+</section>
+
+<footer>© 2025 UnityMUN. All Rights Reserved.</footer>
+</body>
+</html>
