@@ -1,16 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>UnityMUN | Committees</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-</head>
-<body style="background:black;color:gold;font-family:Arial;">
+<title>UnityMUN | Committees</title>
 
-<h2 style="padding:20px;">Committees</h2>
-<p style="padding:20px;">Our committees simulate real UN bodies.</p>
-<a href="index.html">← Back Home</a>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: gold;
+}
+
+/* Navbar */
+nav {
+  background-color: #111;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: #111;
+  border: 1px solid gold;
+  width: 220px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: gold;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* Content */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.section h1, .section h2, .section h3 {
+  margin-bottom: 15px;
+}
+
+.section p, .section li {
+  line-height: 1.8;
+}
+
+ul {
+  margin-bottom: 30px;
+}
+</style>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+
+<nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="committees.html">Committees</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="apply.html">Apply</a>
+  <a href="team.html">Meet the Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="captures.html">MUN Captures</a>
+</div>
+
+<div class="section">
+  <h1>Committees</h1>
+
+  <h2>General Assembly (GA)</h2>
+  <h3>Introduction</h3>
+  <p>The General Assembly is the main deliberative body of the United Nations, bringing together all member states to discuss global challenges, promote international cooperation, and develop solutions through diplomacy and dialogue.</p>
+  <h3>Topics</h3>
+  <ul>
+    <li><strong>The Impact of Modern Technology on the International Community:</strong> Examining how technological advancements affect global security, economic development, communication, and international relations.</li>
+    <li><strong>Regulation of Autonomous Weapons Systems:</strong> Addressing the ethical, legal, and security implications of autonomous weapons and the need for international regulation.</li>
+  </ul>
+  <hr>
+
+  <h2>Human Rights Council (HRC)</h2>
+  <h3>Introduction</h3>
+  <p>The Human Rights Council is responsible for promoting and protecting human rights around the world. Delegates work to address violations, strengthen accountability, and ensure dignity and equality for all.</p>
+  <h3>Topics</h3>
+  <ul>
+    <li><strong>Accountability and Responsibility Toward Syrian Refugees Under International Human Rights Frameworks:</strong> Assessing international obligations and shared responsibility for the protection and rights of Syrian refugees.</li>
+    <li><strong>Artificial Intelligence and the Protection of Workers’ Rights:</strong> Exploring the impact of AI on employment, labor rights, and the future of work.</li>
+  </ul>
+  <hr>
+
+  <h2>Security Council (SC)</h2>
+  <h3>Introduction</h3>
+  <p>The Security Council is tasked with maintaining international peace and security. It addresses conflicts, imposes sanctions, and authorizes peacekeeping operations to respond to global threats.</p>
+  <h3>Topics</h3>
+  <ul>
+    <li><strong>NATO–Russia Rising Tensions in the Black Sea:</strong> Analyzing escalating geopolitical tensions and their implications for regional and global security.</li>
+    <li><strong>UNSC Sanctions and Their Global Impacts on Security and Effectiveness:</strong> Evaluating the effectiveness of sanctions and their consequences on international stability and humanitarian conditions.</li>
+  </ul>
+  <hr>
+
+  <h2>International Criminal Court (ICC)</h2>
+  <h3>Introduction</h3>
+  <p>The International Criminal Court seeks justice for victims of the gravest crimes under international law, including genocide, crimes against humanity, and war crimes.</p>
+  <h3>Topics</h3>
+  <ul>
+    <li><strong>Ensuring Accountability for Crimes Against Humanity: The Case of Saif al-Islam Gaddafi:</strong> Discussing legal challenges and international efforts to ensure accountability.</li>
+    <li><strong>Child Soldier Recruitment and International Justice: Lessons from Thomas Lubanga Dyilo:</strong> Examining international legal responses to the recruitment and use of child soldiers.</li>
+  </ul>
+  <hr>
+
+  <h2>Jordanian House of Representatives (مجلس النواب الأردني)</h2>
+  <h3>Introduction</h3>
+  <p>This committee simulates the Jordanian legislative body, focusing on national policymaking, legal reform, and issues directly affecting Jordan’s society and economy.</p>
+  <h3>المواضيع</h3>
+  <ul>
+    <li><strong>قانون الجرائم الإلكترونية وتنظيم المحتوى الرقمي:</strong> مناقشة التشريعات المتعلقة بالجرائم الإلكترونية وضبط المحتوى الرقمي.</li>
+    <li><strong>الطاقة المتجددة وتقليل كلفة الطاقة:</strong> بحث سبل دعم الطاقة المتجددة وخفض تكاليف الطاقة على الدولة والمواطنين.</li>
+  </ul>
+  <hr>
+
+  <h2>INTERPOL</h2>
+  <h3>Introduction</h3>
+  <p>INTERPOL facilitates international police cooperation to combat transnational crime and enhance global security through coordination and information sharing.</p>
+  <h3>Topics</h3>
+  <ul>
+    <li><strong>Crime Prevention and Criminal Justice:</strong> Strengthening international cooperation in crime prevention and justice systems.</li>
+    <li><strong>Cybercrime:</strong> Addressing digital threats, online criminal activity, and cross-border cyber security challenges.</li>
+  </ul>
+</div>
 
 </body>
 </html>
