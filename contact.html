@@ -1,14 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UnityMUN | Contact</title>
-</head>
-<body style="background:black;color:gold;font-family:Arial;">
 
-<h2>Contact</h2>
-<p>Email: Unitymun26@gmail.com</p>
-<a href="index.html">← Back Home</a>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: gold;
+}
+
+/* Navbar */
+nav {
+  background-color: #111;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: #111;
+  border: 1px solid gold;
+  width: 220px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: gold;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* Content */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  line-height: 1.8;
+}
+
+.section h1, .section h2 {
+  margin-bottom: 20px;
+}
+
+.section p {
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+}
+</style>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+
+<nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="committees.html">Committees</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="apply.html">Apply</a>
+  <a href="team.html">Meet the Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="captures.html">MUN Captures</a>
+</div>
+
+<div class="section">
+  <h1>Contact Us</h1>
+
+  <p>We’d love to hear from you!<br>
+  If you have any questions regarding UNITY MUN, applications, partnerships, or general inquiries, please feel free to reach out to us through the following channels:</p>
+
+  <div class="contact-info">
+    <p>📞 <strong>Phone:</strong> 079 808 3002</p>
+    <p>📧 <strong>Personal Email:</strong> <a href="mailto:celinazakaria1@gmail.com" style="color:gold;">celinazakaria1@gmail.com</a></p>
+    <p>📧 <strong>Official MUN Email:</strong> <a href="mailto:unity26@gmail.com" style="color:gold;">unity26@gmail.com</a></p>
+    <p>📸 <strong>Instagram:</strong> <a href="https://www.instagram.com/unitymun_26" target="_blank" style="color:gold;">@unitymun_26</a></p>
+  </div>
+
+  <hr>
+
+  <p>Our team will respond to your inquiries as soon as possible.<br>
+  We look forward to connecting with you and welcoming you to UNITY MUN.</p>
+</div>
 
 </body>
 </html>
