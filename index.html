@@ -1,35 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>UnityMUN | Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body { margin:0; font-family:Arial; background:black; color:gold; }
-nav { background:#111; padding:15px 10%; display:flex; justify-content:space-between; align-items:center; }
-a { color:gold; text-decoration:none; display:block; padding:10px; }
-.menu { display:none; position:absolute; right:10%; top:60px; background:#111; border:1px solid gold; }
-.menu a:hover { background:gold; color:black; }
-.hero { text-align:center; padding:100px 10%; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: gold;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #111;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+/* HAMBURGER */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MENU */
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: #111;
+  border: 1px solid gold;
+  width: 220px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: gold;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* HERO / HOME CONTENT */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  margin-top: 40px;
+}
+
+.hero p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
 </style>
 
 <script>
-function toggleMenu(){
-  const m=document.getElementById("menu");
-  m.style.display=m.style.display==="block"?"none":"block";
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 </script>
-</head>
 
+</head>
 <body>
 
 <nav>
   <h2>UnityMUN</h2>
-  <div onclick="toggleMenu()" style="font-size:28px;cursor:pointer;">☰</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
 </nav>
 
-<div id="menu" class="menu">
+<div class="menu" id="menu">
   <a href="committees.html">Committees</a>
   <a href="schedule.html">Schedule</a>
   <a href="apply.html">Apply</a>
@@ -73,7 +139,6 @@ function toggleMenu(){
     unity in an ever-evolving world.
   </p>
 </div>
-
 
 </body>
 </html>
