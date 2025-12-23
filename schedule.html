@@ -6,35 +6,24 @@
 <title>UnityMUN | Schedule</title>
 
 <style>
-/* ===== Global Styles ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-
-  background-image: url('images/IMG_0536.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  background-color: black;
+  background: black url('images/IMG_0536.jpeg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* Dark overlay */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.65);
+  inset: 0;
+  background: rgba(0,0,0,0.6);
   z-index: -1;
 }
 
-/* ===== Navbar ===== */
 nav {
-  background-color: rgba(17,17,17,0.9);
+  background: rgba(0,0,0,0.85);
   padding: 15px 10%;
   display: flex;
   justify-content: space-between;
@@ -42,27 +31,19 @@ nav {
   border-bottom: 2px solid white;
 }
 
-nav h2 {
-  margin: 0;
-  color: white;
-}
-
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
-  color: white;
 }
 
-/* ===== Menu ===== */
 .menu {
   display: none;
   position: absolute;
-  top: 60px;
   right: 10%;
-  background-color: rgba(17,17,17,0.95);
+  top: 60px;
+  background: rgba(0,0,0,0.95);
   border: 1px solid white;
   width: 220px;
-  z-index: 1000;
 }
 
 .menu a {
@@ -73,30 +54,15 @@ nav h2 {
 }
 
 .menu a:hover {
-  background-color: white;
+  background: white;
   color: black;
 }
 
-/* ===== Page Content ===== */
 .section {
   max-width: 900px;
   margin: auto;
-  padding: 50px 20px;
-  text-align: center;
+  padding: 60px 20px;
   line-height: 1.8;
-}
-
-.section h1 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.section h2 {
-  margin-top: 40px;
-}
-
-.schedule-block {
-  margin-bottom: 30px;
 }
 </style>
 
@@ -126,54 +92,41 @@ function toggleMenu() {
 </div>
 
 <div class="section">
+<h1>Conference Schedule</h1>
 
-  <h1>Conference Schedule</h1>
+<h2>Day 1 – Opening & Lobbying</h2>
+<p>3:30 – 4:00 PM — Registration of Delegates</p>
+<p>4:00 – 6:00 PM — Opening Ceremony</p>
+<p>6:00 – 7:30 PM — Lobbying & Merging Session 1</p>
+<p>7:30 – 8:00 PM — Coffee Break</p>
+<p>8:00 – 10:00 PM — Lobbying & Merging Session 2</p>
 
-  <!-- ===== Day 1 ===== -->
-  <h2>Day 1 – Opening & Lobbying</h2>
+<hr>
 
-  <div class="schedule-block">
-    <p><strong>3:30 – 4:00 PM</strong><br>Registration of Delegates</p>
-    <p><strong>4:00 – 6:00 PM</strong><br>Opening Ceremony</p>
-    <p><strong>6:00 – 7:30 PM</strong><br>Lobbying & Merging Session 1</p>
-    <p><strong>7:30 – 8:00 PM</strong><br>Coffee Break</p>
-    <p><strong>8:00 – 10:00 PM</strong><br>Lobbying & Merging Session 2</p>
-  </div>
+<h2>Day 2 – Debate Sessions</h2>
+<p>8:30 – 9:00 AM — Arrival of Delegates</p>
+<p>9:00 – 11:00 AM — Debate Session 1</p>
+<p>11:00 – 11:30 AM — Coffee Break</p>
+<p>11:30 AM – 1:30 PM — Debate Session 2</p>
+<p>1:30 – 2:30 PM — Lunch Break</p>
+<p>2:30 – 4:30 PM — Debate Session 3</p>
+<p>4:30 – 5:00 PM — Coffee Break</p>
+<p>5:00 – 7:00 PM — Debate Session 4</p>
 
-  <hr>
+<hr>
 
-  <!-- ===== Day 2 ===== -->
-  <h2>Day 2 – Debate Sessions</h2>
-
-  <div class="schedule-block">
-    <p><strong>8:30 – 9:00 AM</strong><br>Arrival of Delegates</p>
-    <p><strong>9:00 – 11:00 AM</strong><br>Debate Session 1</p>
-    <p><strong>11:00 – 11:30 AM</strong><br>Coffee Break</p>
-    <p><strong>11:30 AM – 1:30 PM</strong><br>Debate Session 2</p>
-    <p><strong>1:30 – 2:30 PM</strong><br>Lunch Break</p>
-    <p><strong>2:30 – 4:30 PM</strong><br>Debate Session 3</p>
-    <p><strong>4:30 – 5:00 PM</strong><br>Coffee Break</p>
-    <p><strong>5:00 – 7:00 PM</strong><br>Debate Session 4</p>
-  </div>
-
-  <hr>
-
-  <!-- ===== Day 3 ===== -->
-  <h2>Day 3 – Final Debates & Closing</h2>
-
-  <div class="schedule-block">
-    <p><strong>9:00 – 9:30 AM</strong><br>Registration of Delegates</p>
-    <p><strong>9:30 – 11:30 AM</strong><br>Debate Session 1</p>
-    <p><strong>11:30 AM – 12:00 PM</strong><br>Coffee Break</p>
-    <p><strong>12:00 – 2:00 PM</strong><br>Debate Session 2</p>
-    <p><strong>2:00 – 3:30 PM</strong><br>Lunch Break</p>
-    <p><strong>3:30 – 5:30 PM</strong><br>Debate Session 3</p>
-    <p><strong>5:30 – 6:00 PM</strong><br>Coffee Break</p>
-    <p><strong>6:00 – 8:00 PM</strong><br>Debate Session 4</p>
-    <p><strong>8:00 – 10:00 PM</strong><br>Closing Ceremony</p>
-  </div>
+<h2>Day 3 – Final Debates & Closing</h2>
+<p>9:00 – 9:30 AM — Registration of Delegates</p>
+<p>9:30 – 11:30 AM — Debate Session 1</p>
+<p>11:30 AM – 12:00 PM — Coffee Break</p>
+<p>12:00 – 2:00 PM — Debate Session 2</p>
+<p>2:00 – 3:30 PM — Lunch Break</p>
+<p>3:30 – 5:30 PM — Debate Session 3</p>
+<p>5:30 – 6:00 PM — Coffee Break</p>
+<p>6:00 – 8:00 PM — Debate Session 4</p>
+<p>8:00 – 10:00 PM — Closing Ceremony</p>
 
 </div>
 
 </body>
-<
+</html>
