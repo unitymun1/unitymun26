@@ -5,23 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UnityMUN | Home</title>
 <style>
-/* Global Styles for All Pages */
-html, body {
+/* Global Styles */
+body {
+  position: relative; /* Fix for overlay */
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: Arial, sans-serif;
   color: white;
-  overflow-x: hidden;
+  min-height: 100vh;
   background-image: url('images/IMG_0536.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-color: black;
+  overflow-x: hidden;
 }
 
-/* Dark overlay for readability */
+/* Dark overlay */
 body::before {
   content: "";
   position: fixed;
@@ -82,6 +83,8 @@ nav h2 {
 
 /* Section content */
 .section {
+  position: relative; /* Ensure it is above overlay */
+  z-index: 1;
   max-width: 900px;
   margin: 0 auto;
   padding: 50px 20px;
@@ -107,3 +110,30 @@ function toggleMenu() {
 <body>
 
 <nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="committees.html">Committees</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="apply.html">Apply</a>
+  <a href="team.html">Meet the Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="captures.html">MUN Captures</a>
+</div>
+
+<div class="section">
+  <h1>What Is UNITY MUN?</h1>
+  <p>UNITY MUN is a model united nations; it is a student-led academic conference dedicated to empowering students, it also brings the nations together through dialogue. It is built on the belief that dialogue and cooperation are essential in addressing today's global challenges. UNITY MUN provides a dynamic platform where delegates engage in meaningful debate, critical thinking, and collaborative problem-solving.</p>
+  <p>At UNITY MUN, participants represent countries and international actors as they simulate real United Nations committees, debate pressing global issues, and work together to craft innovative, realistic solutions. Our conference emphasizes respectful discourse, inclusivity, and academic excellence, ensuring a supportive environment for both first-time and experienced delegates.</p>
+  <p>Guided by the core values of unity, integrity, and diplomacy, UNITY MUN aims to empower students with the skills needed to lead in an increasingly interconnected world. Through debate, diplomacy, and cooperation, UNITY MUN prepares delegates to become informed global citizens and confident future leaders.</p>
+  <p>We would love it if you join us in shaping conversations that matter and building unity through dialogue.</p>
+  <hr>
+  <h2>Theme: Voices of the Generation</h2>
+  <p>Voices of the Generation represents the power of youth in shaping the present and the future. This theme highlights the importance of giving young people a platform to express their ideas, concerns, and solutions to global challenges.</p>
+  <p>Through this theme, UNITY MUN encourages delegates to speak up, take responsibility, and use their voices to promote change, innovation, and unity in an ever-evolving world.</p>
+</div>
+
+</body>
+</html>
