@@ -5,24 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UnityMUN | Home</title>
 <style>
-/* Global Styles */
+/* Global Styles for All Pages */
 body {
-  position: relative; /* Fix for overlay */
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  color: white;
-  min-height: 100vh;
-  background-image: url('images/IMG_0536.jpeg');
+  color: gold;
+
+  /* Background image */
+  background-image: url('images/IMG_0536.jpeg'); /* Update with your path */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: black;
-  overflow-x: hidden;
+  background-color: black; /* fallback color */
 }
 
-/* Dark overlay */
+/* Dark overlay for readability */
 body::before {
   content: "";
   position: fixed;
@@ -30,32 +28,27 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.6); /* adjust opacity if needed */
   z-index: -1;
 }
 
 /* Navbar */
 nav {
-  background-color: rgba(17,17,17,0.9);
+  background-color: rgba(17,17,17,0.9); /* semi-transparent */
   padding: 15px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  border-bottom: 2px solid gold;
 }
 
 nav h2 {
   margin: 0;
-  color: white;
 }
 
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
-  color: white;
 }
 
 .menu {
@@ -64,27 +57,25 @@ nav h2 {
   top: 60px;
   right: 10%;
   background-color: rgba(17,17,17,0.95);
-  border: 1px solid white;
+  border: 1px solid gold;
   width: 220px;
-  z-index: 20;
+  z-index: 1000;
 }
 
 .menu a {
   display: block;
   padding: 12px;
-  color: white;
+  color: gold;
   text-decoration: none;
 }
 
 .menu a:hover {
-  background-color: white;
+  background-color: gold;
   color: black;
 }
 
 /* Section content */
 .section {
-  position: relative; /* Ensure it is above overlay */
-  z-index: 1;
   max-width: 900px;
   margin: 0 auto;
   padding: 50px 20px;
@@ -92,13 +83,7 @@ nav h2 {
   text-align: center;
 }
 
-.section h1, .section h2 { margin-bottom: 20px; font-size: 36px; }
-.section p { margin-bottom: 20px; }
-
-hr {
-  border: 1px solid white;
-  margin: 40px 0;
-}
+.section h1 { margin-bottom: 20px; font-size: 36px; }
 </style>
 <script>
 function toggleMenu() {
