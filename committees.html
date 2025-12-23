@@ -2,57 +2,156 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>UnityMUN | Committees</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="index.html">
+<title>UnityMUN | Committees</title>
+
 <style>
-body { color:white; background:url('images/IMG_0536.jpeg') center/cover fixed black; margin:0; font-family:Arial;}
-body::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:-1}
-.section{max-width:900px;margin:auto;padding:60px 20px;line-height:1.8}
-h2{margin-top:40px}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-image: url('images/IMG_0536.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* NAVBAR */
+nav {
+  background-color: rgba(17,17,17,0.9);
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: rgba(17,17,17,0.95);
+  border: 1px solid white;
+  width: 220px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* CONTENT */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  line-height: 1.8;
+}
+
+h1, h2 {
+  margin-top: 40px;
+}
+
+ul {
+  margin-left: 20px;
+}
 </style>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 </head>
+
 <body>
 
+<nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="committees.html">Committees</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="apply.html">Apply</a>
+  <a href="team.html">Meet the Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="captures.html">MUN Captures</a>
+</div>
+
 <div class="section">
-<h1>Committees</h1>
+  <h1>Committees</h1>
 
-<h2>General Assembly (GA)</h2>
-<p>Main deliberative body of the UN addressing global challenges.</p>
-<ul>
-<li>Impact of Modern Technology</li>
-<li>Regulation of Autonomous Weapons</li>
-</ul>
+  <h2>General Assembly (GA)</h2>
+  <p>The General Assembly is the main deliberative body of the United Nations, bringing together all member states to discuss global challenges and promote cooperation.</p>
+  <ul>
+    <li><strong>The Impact of Modern Technology on the International Community</strong><br>Examining technological effects on security, economy, and relations.</li>
+    <li><strong>Regulation of Autonomous Weapons Systems</strong><br>Addressing ethical and legal concerns.</li>
+  </ul>
 
-<h2>Human Rights Council (HRC)</h2>
-<ul>
-<li>Syrian Refugees Accountability</li>
-<li>AI & Workers’ Rights</li>
-</ul>
+  <h2>Human Rights Council (HRC)</h2>
+  <p>Responsible for promoting and protecting human rights worldwide.</p>
+  <ul>
+    <li><strong>Accountability Toward Syrian Refugees</strong></li>
+    <li><strong>AI and the Protection of Workers’ Rights</strong></li>
+  </ul>
 
-<h2>Security Council (SC)</h2>
-<ul>
-<li>NATO–Russia Black Sea Tensions</li>
-<li>UNSC Sanctions Effectiveness</li>
-</ul>
+  <h2>Security Council (SC)</h2>
+  <p>Maintains international peace and security.</p>
+  <ul>
+    <li><strong>NATO–Russia Tensions in the Black Sea</strong></li>
+    <li><strong>UNSC Sanctions and Global Impacts</strong></li>
+  </ul>
 
-<h2>International Criminal Court (ICC)</h2>
-<ul>
-<li>Saif al-Islam Gaddafi Case</li>
-<li>Child Soldiers & Justice</li>
-</ul>
+  <h2>International Criminal Court (ICC)</h2>
+  <p>Seeks justice for crimes under international law.</p>
+  <ul>
+    <li><strong>Saif al-Islam Gaddafi Case</strong></li>
+    <li><strong>Child Soldier Recruitment</strong></li>
+  </ul>
 
-<h2>Jordanian House of Representatives</h2>
-<ul>
-<li>قانون الجرائم الإلكترونية</li>
-<li>الطاقة المتجددة</li>
-</ul>
+  <h2>Jordanian House of Representatives (مجلس النواب الأردني)</h2>
+  <ul>
+    <li>قانون الجرائم الإلكترونية وتنظيم المحتوى الرقمي</li>
+    <li>الطاقة المتجددة وتقليل كلفة الطاقة</li>
+  </ul>
 
-<h2>INTERPOL</h2>
-<ul>
-<li>Crime Prevention</li>
-<li>Cybercrime</li>
-</ul>
+  <h2>INTERPOL</h2>
+  <ul>
+    <li>Crime Prevention and Criminal Justice</li>
+    <li>Cybercrime</li>
+  </ul>
 </div>
 
 </body>
