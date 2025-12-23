@@ -1,29 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>UnityMUN | Schedule</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnityMUN | Schedule</title>
+
 <style>
-body{color:white;background:url('images/IMG_0536.jpeg') center/cover fixed black;margin:0;font-family:Arial}
-body::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:-1}
-.section{max-width:900px;margin:auto;padding:60px 20px}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  background-image: url('images/IMG_0536.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
+}
+
+/* Dark overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.65);
+  z-index: -1;
+}
+
+/* Navbar */
+nav {
+  background-color: rgba(17,17,17,0.9);
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+nav h2 {
+  margin: 0;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Menu */
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: rgba(17,17,17,0.95);
+  border: 1px solid white;
+  width: 230px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Section content */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  line-height: 1.9;
+}
+
+.section h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-top: 50px;
+}
+
+ul {
+  margin-left: 20px;
+}
 </style>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 </head>
+
 <body>
 
-<div class="section">
-<h1>Conference Schedule</h1>
+<nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
 
-<h2>Day 1</h2>
-<p>Opening Ceremony & Lobbying</p>
-
-<h2>Day 2</h2>
-<p>Debate Sessions</p>
-
-<h2>Day 3</h2>
-<p>Final Debates & Closing Ceremony</p>
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="committees.html">Committees</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="apply.html">Apply</a>
+  <a href="team.html">Meet the Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="captures.html">MUN Captures</a>
 </div>
 
-</body>
-</html>
+<div class="section">
+  <h1>Conference Schedule</h1>
+
+  <h2>Day 1 – Opening & Lobbying</h2>
+  <p><strong>3:30 – 4:00 PM</strong><br>Registration of Delegates</p>
+  <p><strong>4:00 – 6:00 PM</strong><br>Opening Ceremony</p>
+  <p><strong>6:00 – 7:30 PM</strong><br>Lobbying & Merging Session 1</p>
+  <p><strong>7:30 – 8:00 PM</strong><br>Coffee Break</p>
+  <p><strong>8:00 – 10:00 PM</strong><br>Lobbying & Merging Session 2</p>
+
+  <hr>
+
+  <h2>Day 2 – Debate Sessions</h2>
+  <p><strong>8:30 – 9:00 AM</strong><br>Arrival of Delegates</p>
+  <p><strong>9:00 – 11:00 AM</strong><br>Debate Session 1</p>
+  <p><strong>11:00 – 11:30 AM</strong><br>Coffee Break</p>
+  <p><strong>11:30 AM – 1:30 PM</strong><br>Debate Session 2</p>
+  <p><strong>1:30 – 2:30 PM</strong><br>Lunch Break</p>
+  <p><strong>2:30 – 4:30 PM</strong><br>Debate Session 3</p>
+  <p><strong>4:30 – 5:00 PM</strong><br>Coffee Break</p>
+  <p><strong>5:00 – 7:00 PM</stro
