@@ -5,17 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UnityMUN | Home</title>
 <style>
+/* Global Styles for All Pages */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: gold;
-  background-image: url('images/IMG_0536.jpeg');
+
+  /* Background image */
+  background-image: url('images/IMG_0536.jpeg'); /* Update with your path */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: black;
+  background-color: black; /* fallback color */
 }
+
+/* Dark overlay for readability */
 body::before {
   content: "";
   position: fixed;
@@ -23,19 +28,29 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.6); /* adjust opacity if needed */
   z-index: -1;
 }
+
+/* Navbar */
 nav {
-  background-color: rgba(17,17,17,0.9);
+  background-color: rgba(17,17,17,0.9); /* semi-transparent */
   padding: 15px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid gold;
 }
-nav h2 { margin: 0; }
-.menu-icon { font-size: 28px; cursor: pointer; }
+
+nav h2 {
+  margin: 0;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
 .menu {
   display: none;
   position: absolute;
@@ -46,14 +61,28 @@ nav h2 { margin: 0; }
   width: 220px;
   z-index: 1000;
 }
+
 .menu a {
   display: block;
   padding: 12px;
   color: gold;
   text-decoration: none;
 }
-.menu a:hover { background-color: gold; color: black; }
-.section { max-width: 900px; margin: 0 auto; padding: 50px 20px; line-height: 1.8; text-align: center; }
+
+.menu a:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* Section content */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  line-height: 1.8;
+  text-align: center;
+}
+
 .section h1 { margin-bottom: 20px; font-size: 36px; }
 </style>
 <script>
@@ -87,9 +116,4 @@ function toggleMenu() {
   <p>We would love it if you join us in shaping conversations that matter and building unity through dialogue.</p>
   <hr>
   <h2>Theme: Voices of the Generation</h2>
-  <p>Voices of the Generation represents the power of youth in shaping the present and the future. This theme highlights the importance of giving young people a platform to express their ideas, concerns, and solutions to global challenges.</p>
-  <p>Through this theme, UNITY MUN encourages delegates to speak up, take responsibility, and use their voices to promote change, innovation, and unity in an ever-evolving world.</p>
-</div>
-
-</body>
-</html>
+  <p>Voices of the Generati
