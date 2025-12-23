@@ -6,18 +6,19 @@
 <title>UnityMUN | Home</title>
 <style>
 /* Global Styles for All Pages */
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
   color: white;
-
-  /* Background image */
-  background-image: url('images/IMG_0536.jpeg'); /* Update with your path */
+  overflow-x: hidden;
+  background-image: url('images/IMG_0536.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: black; /* fallback color */
+  background-color: black;
 }
 
 /* Dark overlay for readability */
@@ -28,18 +29,21 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6); /* adjust opacity if needed */
+  background-color: rgba(0,0,0,0.6);
   z-index: -1;
 }
 
 /* Navbar */
 nav {
-  background-color: rgba(17,17,17,0.9); /* semi-transparent */
+  background-color: rgba(17,17,17,0.9);
   padding: 15px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav h2 {
@@ -61,7 +65,7 @@ nav h2 {
   background-color: rgba(17,17,17,0.95);
   border: 1px solid white;
   width: 220px;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .menu a {
@@ -87,6 +91,11 @@ nav h2 {
 
 .section h1, .section h2 { margin-bottom: 20px; font-size: 36px; }
 .section p { margin-bottom: 20px; }
+
+hr {
+  border: 1px solid white;
+  margin: 40px 0;
+}
 </style>
 <script>
 function toggleMenu() {
@@ -98,19 +107,3 @@ function toggleMenu() {
 <body>
 
 <nav>
-  <h2>UnityMUN</h2>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
-</nav>
-<div class="menu" id="menu">
-  <a href="index.html">Home</a>
-  <a href="committees.html">Committees</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="apply.html">Apply</a>
-  <a href="team.html">Meet the Team</a>
-  <a href="contact.html">Contact</a>
-  <a href="captures.html">MUN Captures</a>
-</div>
-
-<div class="section">
-  <h1>What Is UNITY MUN?</h1>
-  <p>UNITY MUN is a model united nations; it is a student-led academic conference dedicated to empowering students, it also brings the nations together through dialogue. It is
