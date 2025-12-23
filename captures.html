@@ -1,14 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>UnityMUN | Captures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnityMUN | MUN Captures</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: gold;
+}
+
+/* Navbar */
+nav {
+  background-color: #111;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: #111;
+  border: 1px solid gold;
+  width: 220px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: gold;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* Content */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.section h1, .section h2 {
+  margin-bottom: 20px;
+}
+
+.section p {
+  margin-bottom: 15px;
+}
+</style>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 </head>
-<body style="background:black;color:gold;font-family:Arial;">
 
-<h2>MUN Captures</h2>
-<p>Photos and highlights coming soon.</p>
-<a href="index.html">← Back Home</a>
+<body>
 
-</body>
-</html>
+<nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="tog
