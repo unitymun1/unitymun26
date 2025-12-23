@@ -6,30 +6,35 @@
 <title>UnityMUN | Committees</title>
 
 <style>
-/* FORCE WHITE TEXT EVERYWHERE */
-* {
-  color: white !important;
-}
-
 /* BODY */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('images/IMG_0536.jpeg') center / cover fixed no-repeat black;
+  color: white;
+
+  background-image: url('images/IMG_0536.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
 }
 
 /* DARK OVERLAY */
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
   z-index: -1;
 }
 
 /* NAVBAR */
 nav {
-  background: rgba(17,17,17,0.9);
+  background-color: rgba(17,17,17,0.9);
   padding: 15px 10%;
   display: flex;
   justify-content: space-between;
@@ -37,9 +42,15 @@ nav {
   border-bottom: 2px solid white;
 }
 
+nav h2 {
+  margin: 0;
+  color: white;
+}
+
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
+  color: white;
 }
 
 /* MENU */
@@ -48,7 +59,7 @@ nav {
   position: absolute;
   top: 60px;
   right: 10%;
-  background: rgba(17,17,17,0.95);
+  background-color: rgba(17,17,17,0.95);
   border: 1px solid white;
   width: 220px;
   z-index: 1000;
@@ -57,29 +68,34 @@ nav {
 .menu a {
   display: block;
   padding: 12px;
+  color: white;
   text-decoration: none;
 }
 
 .menu a:hover {
-  background: white;
-  color: black !important;
+  background-color: white;
+  color: black;
 }
 
 /* CONTENT */
 .section {
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
   padding: 60px 20px;
   line-height: 1.9;
 }
 
-h1 {
+.section h1 {
   text-align: center;
   margin-bottom: 40px;
 }
 
-h2 {
+.section h2 {
   margin-top: 40px;
+}
+
+.section ul {
+  margin-left: 20px;
 }
 </style>
 
@@ -113,63 +129,62 @@ function toggleMenu() {
 
   <h2>General Assembly (GA)</h2>
   <p>
-    The General Assembly serves as the main deliberative body of the United Nations,
-    where all member states have equal representation. Delegates debate global issues
-    affecting international peace, development, and cooperation.
+    The General Assembly is the main deliberative body of the United Nations, bringing
+    together all member states to discuss global challenges, promote international
+    cooperation, and develop solutions through diplomacy and dialogue.
   </p>
   <ul>
-    <li>The Impact of Modern Technology on Global Stability</li>
+    <li>The Impact of Modern Technology on the International Community</li>
     <li>Regulation of Autonomous Weapons Systems</li>
   </ul>
 
   <h2>Human Rights Council (HRC)</h2>
   <p>
-    The Human Rights Council focuses on the promotion and protection of human rights
-    around the world, addressing violations and proposing international solutions.
+    The Human Rights Council is responsible for promoting and protecting human rights
+    around the world, addressing violations and ensuring dignity and equality for all.
   </p>
   <ul>
     <li>Accountability Toward Syrian Refugees</li>
-    <li>The Impact of Artificial Intelligence on Workers’ Rights</li>
+    <li>Artificial Intelligence and Workers’ Rights</li>
   </ul>
 
   <h2>Security Council (SC)</h2>
   <p>
-    The Security Council is responsible for maintaining international peace and security,
-    addressing conflicts, sanctions, and threats to global stability.
+    The Security Council is tasked with maintaining international peace and security,
+    addressing conflicts, sanctions, and global threats.
   </p>
   <ul>
-    <li>NATO–Russia Tensions</li>
-    <li>Sanctions and Their Impact on Global Security</li>
+    <li>NATO–Russia Rising Tensions</li>
+    <li>UNSC Sanctions and Their Global Impacts</li>
   </ul>
 
   <h2>International Criminal Court (ICC)</h2>
   <p>
-    The ICC investigates and prosecutes individuals accused of genocide, war crimes,
-    crimes against humanity, and aggression.
+    The ICC seeks justice for victims of genocide, war crimes, and crimes against humanity.
   </p>
   <ul>
     <li>The Case of Saif al-Islam Gaddafi</li>
-    <li>Child Soldier Recruitment and Accountability</li>
+    <li>Child Soldier Recruitment and Justice</li>
   </ul>
 
   <h2>Jordanian House of Representatives</h2>
   <p>
-    This committee simulates the Jordanian legislative body, focusing on national laws
-    and policies relevant to Jordan’s future.
+    This committee simulates the Jordanian legislative body, focusing on national
+    policymaking and legal reform.
   </p>
   <ul>
     <li>قانون الجرائم الإلكترونية</li>
-    <li>سياسات الطاقة المتجددة في الأردن</li>
+    <li>الطاقة المتجددة وتقليل كلفة الطاقة</li>
   </ul>
 
   <h2>INTERPOL</h2>
   <p>
     INTERPOL facilitates international police cooperation to combat transnational crime
-    and ensure global security.
+    and enhance global security.
   </p>
   <ul>
-    <li>Combating Cybercrime</li>
-    <li>International Crime Prevention Strategies</li>
+    <li>Crime Prevention and Criminal Justice</li>
+    <li>Cybercrime</li>
   </ul>
 </div>
 
