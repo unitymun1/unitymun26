@@ -6,7 +6,6 @@
 <title>UnityMUN | Committees</title>
 
 <style>
-/* BODY */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -20,7 +19,7 @@ body {
   background-color: black;
 }
 
-/* DARK OVERLAY */
+/* Dark overlay */
 body::before {
   content: "";
   position: fixed;
@@ -28,11 +27,11 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.65);
   z-index: -1;
 }
 
-/* NAVBAR */
+/* Navbar */
 nav {
   background-color: rgba(17,17,17,0.9);
   padding: 15px 10%;
@@ -53,7 +52,7 @@ nav h2 {
   color: white;
 }
 
-/* MENU */
+/* Menu */
 .menu {
   display: none;
   position: absolute;
@@ -61,7 +60,7 @@ nav h2 {
   right: 10%;
   background-color: rgba(17,17,17,0.95);
   border: 1px solid white;
-  width: 220px;
+  width: 230px;
   z-index: 1000;
 }
 
@@ -77,10 +76,10 @@ nav h2 {
   color: black;
 }
 
-/* CONTENT */
+/* Content */
 .section {
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
   padding: 60px 20px;
   line-height: 1.9;
 }
@@ -91,10 +90,10 @@ nav h2 {
 }
 
 .section h2 {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
-.section ul {
+ul {
   margin-left: 20px;
 }
 </style>
@@ -129,59 +128,103 @@ function toggleMenu() {
 
   <h2>General Assembly (GA)</h2>
   <p>
-    The General Assembly is the main deliberative body of the United Nations, bringing
-    together all member states to discuss global challenges, promote international
-    cooperation, and develop solutions through diplomacy and dialogue.
+    The General Assembly is the main deliberative body of the United Nations, bringing together
+    all member states to discuss global challenges, promote international cooperation, and
+    develop solutions through diplomacy and dialogue.
   </p>
+  <h3>Topics</h3>
   <ul>
-    <li>The Impact of Modern Technology on the International Community</li>
-    <li>Regulation of Autonomous Weapons Systems</li>
+    <li>
+      <strong>The Impact of Modern Technology on the International Community</strong><br>
+      Examining how technological advancements affect global security, economic development,
+      communication, and international relations.
+    </li>
+    <li>
+      <strong>Regulation of Autonomous Weapons Systems</strong><br>
+      Addressing the ethical, legal, and security implications of autonomous weapons and the
+      need for international regulation.
+    </li>
   </ul>
 
   <h2>Human Rights Council (HRC)</h2>
   <p>
-    The Human Rights Council is responsible for promoting and protecting human rights
-    around the world, addressing violations and ensuring dignity and equality for all.
+    The Human Rights Council is responsible for promoting and protecting human rights around
+    the world. Delegates work to address violations, strengthen accountability, and ensure
+    dignity and equality for all.
   </p>
+  <h3>Topics</h3>
   <ul>
-    <li>Accountability Toward Syrian Refugees</li>
-    <li>Artificial Intelligence and Workers’ Rights</li>
+    <li>
+      <strong>Accountability and Responsibility Toward Syrian Refugees</strong><br>
+      Assessing international obligations and shared responsibility for the protection and
+      rights of Syrian refugees.
+    </li>
+    <li>
+      <strong>Artificial Intelligence and the Protection of Workers’ Rights</strong><br>
+      Exploring the impact of AI on employment, labor rights, and the future of work.
+    </li>
   </ul>
 
   <h2>Security Council (SC)</h2>
   <p>
-    The Security Council is tasked with maintaining international peace and security,
-    addressing conflicts, sanctions, and global threats.
+    The Security Council is tasked with maintaining international peace and security. It
+    addresses conflicts, imposes sanctions, and authorizes peacekeeping operations to respond
+    to global threats.
   </p>
+  <h3>Topics</h3>
   <ul>
-    <li>NATO–Russia Rising Tensions</li>
-    <li>UNSC Sanctions and Their Global Impacts</li>
+    <li>
+      <strong>NATO–Russia Rising Tensions in the Black Sea</strong><br>
+      Analyzing escalating geopolitical tensions and their implications for regional and global
+      security.
+    </li>
+    <li>
+      <strong>UNSC Sanctions and Their Global Impacts</strong><br>
+      Evaluating the effectiveness of sanctions and their consequences on international
+      stability and humanitarian conditions.
+    </li>
   </ul>
 
   <h2>International Criminal Court (ICC)</h2>
   <p>
-    The ICC seeks justice for victims of genocide, war crimes, and crimes against humanity.
+    The International Criminal Court seeks justice for victims of the gravest crimes under
+    international law, including genocide, crimes against humanity, and war crimes.
   </p>
+  <h3>Topics</h3>
   <ul>
-    <li>The Case of Saif al-Islam Gaddafi</li>
-    <li>Child Soldier Recruitment and Justice</li>
+    <li>
+      <strong>The Case of Saif al-Islam Gaddafi</strong><br>
+      Discussing legal challenges and international efforts to ensure accountability.
+    </li>
+    <li>
+      <strong>Child Soldier Recruitment and International Justice</strong><br>
+      Examining international legal responses to the recruitment and use of child soldiers.
+    </li>
   </ul>
 
-  <h2>Jordanian House of Representatives</h2>
+  <h2>Jordanian House of Representatives (مجلس النواب الأردني)</h2>
   <p>
-    This committee simulates the Jordanian legislative body, focusing on national
-    policymaking and legal reform.
+    This committee simulates the Jordanian legislative body, focusing on national policymaking,
+    legal reform, and issues directly affecting Jordan’s society and economy.
   </p>
+  <h3>المواضيع</h3>
   <ul>
-    <li>قانون الجرائم الإلكترونية</li>
-    <li>الطاقة المتجددة وتقليل كلفة الطاقة</li>
+    <li>
+      <strong>قانون الجرائم الإلكترونية وتنظيم المحتوى الرقمي</strong><br>
+      مناقشة التشريعات المتعلقة بالجرائم الإلكترونية وضبط المحتوى الرقمي.
+    </li>
+    <li>
+      <strong>الطاقة المتجددة وتقليل كلفة الطاقة</strong><br>
+      بحث سبل دعم الطاقة المتجددة وخفض تكاليف الطاقة على الدولة والمواطنين.
+    </li>
   </ul>
 
   <h2>INTERPOL</h2>
   <p>
-    INTERPOL facilitates international police cooperation to combat transnational crime
-    and enhance global security.
+    INTERPOL facilitates international police cooperation to combat transnational crime and
+    enhance global security through coordination and information sharing.
   </p>
+  <h3>Topics</h3>
   <ul>
     <li>Crime Prevention and Criminal Justice</li>
     <li>Cybercrime</li>
