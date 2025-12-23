@@ -6,29 +6,30 @@
 <title>UnityMUN | Committees</title>
 
 <style>
+/* FORCE WHITE EVERYWHERE */
+* {
+  color: white !important;
+}
+
+/* PAGE */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: white;
-  background-image: url('images/IMG_0536.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: black;
+  background: url('images/IMG_0536.jpeg') center / cover fixed no-repeat black;
 }
 
+/* DARK OVERLAY */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.65);
   z-index: -1;
 }
 
 /* NAVBAR */
 nav {
-  background-color: rgba(17,17,17,0.9);
+  background: rgba(17,17,17,0.9);
   padding: 15px 10%;
   display: flex;
   justify-content: space-between;
@@ -36,36 +37,32 @@ nav {
   border-bottom: 2px solid white;
 }
 
-nav h2 {
-  margin: 0;
-}
-
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
 }
 
+/* MENU */
 .menu {
   display: none;
   position: absolute;
   top: 60px;
   right: 10%;
-  background-color: rgba(17,17,17,0.95);
+  background: rgba(17,17,17,0.95);
   border: 1px solid white;
   width: 220px;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .menu a {
   display: block;
   padding: 12px;
-  color: white;
   text-decoration: none;
 }
 
 .menu a:hover {
-  background-color: white;
-  color: black;
+  background: white;
+  color: black !important;
 }
 
 /* CONTENT */
@@ -78,10 +75,6 @@ nav h2 {
 
 h1, h2 {
   margin-top: 40px;
-}
-
-ul {
-  margin-left: 20px;
 }
 </style>
 
@@ -114,43 +107,40 @@ function toggleMenu() {
   <h1>Committees</h1>
 
   <h2>General Assembly (GA)</h2>
-  <p>The General Assembly is the main deliberative body of the United Nations, bringing together all member states to discuss global challenges and promote cooperation.</p>
+  <p>The General Assembly is the main deliberative body of the United Nations.</p>
   <ul>
-    <li><strong>The Impact of Modern Technology on the International Community</strong><br>Examining technological effects on security, economy, and relations.</li>
-    <li><strong>Regulation of Autonomous Weapons Systems</strong><br>Addressing ethical and legal concerns.</li>
+    <li>The Impact of Modern Technology</li>
+    <li>Regulation of Autonomous Weapons</li>
   </ul>
 
   <h2>Human Rights Council (HRC)</h2>
-  <p>Responsible for promoting and protecting human rights worldwide.</p>
   <ul>
-    <li><strong>Accountability Toward Syrian Refugees</strong></li>
-    <li><strong>AI and the Protection of Workers’ Rights</strong></li>
+    <li>Accountability Toward Syrian Refugees</li>
+    <li>AI and Workers’ Rights</li>
   </ul>
 
   <h2>Security Council (SC)</h2>
-  <p>Maintains international peace and security.</p>
   <ul>
-    <li><strong>NATO–Russia Tensions in the Black Sea</strong></li>
-    <li><strong>UNSC Sanctions and Global Impacts</strong></li>
+    <li>NATO–Russia Tensions</li>
+    <li>Sanctions and Global Security</li>
   </ul>
 
   <h2>International Criminal Court (ICC)</h2>
-  <p>Seeks justice for crimes under international law.</p>
   <ul>
-    <li><strong>Saif al-Islam Gaddafi Case</strong></li>
-    <li><strong>Child Soldier Recruitment</strong></li>
+    <li>Saif al-Islam Gaddafi Case</li>
+    <li>Child Soldier Recruitment</li>
   </ul>
 
-  <h2>Jordanian House of Representatives (مجلس النواب الأردني)</h2>
+  <h2>Jordanian House of Representatives</h2>
   <ul>
-    <li>قانون الجرائم الإلكترونية وتنظيم المحتوى الرقمي</li>
-    <li>الطاقة المتجددة وتقليل كلفة الطاقة</li>
+    <li>قانون الجرائم الإلكترونية</li>
+    <li>الطاقة المتجددة</li>
   </ul>
 
   <h2>INTERPOL</h2>
   <ul>
-    <li>Crime Prevention and Criminal Justice</li>
     <li>Cybercrime</li>
+    <li>Crime Prevention</li>
   </ul>
 </div>
 
