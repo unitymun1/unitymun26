@@ -1,29 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>UnityMUN | Apply</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnityMUN | Apply</title>
+
 <style>
-body{color:white;background:url('images/IMG_0536.jpeg') center/cover fixed black;margin:0;font-family:Arial}
-body::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:-1}
-.section{max-width:900px;margin:auto;padding:60px 20px}
-a{color:white}
+/* ===== FIXED BACKGROUND (SAME ON ALL PAGES) ===== */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/IMG_0536.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* ===== PAGE STYLES ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background-color: rgba(17,17,17,0.9);
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: rgba(17,17,17,0.95);
+  border: 1px solid white;
+  width: 230px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ===== CONTENT ===== */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+  line-height: 1.9;
+}
+
+.section h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin-top: 40px;
+}
+
+.section a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.section a:hover {
+  opacity: 0.8;
+}
+
+hr {
+  margin: 50px 0;
+  border: 1px solid rgba(255,255,255,0.3);
+}
 </style>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 </head>
+
 <body>
 
-<div class="section">
-<h1>Apply to UNITY MUN</h1>
-<p>Choose one role and apply using the form.</p>
+<!-- FIXED BACKGROUND -->
+<div class="background"></div>
+<div class="overlay"></div>
 
-<ul>
-<li>Security Team</li>
-<li>Staff</li>
-<li>Media Team</li>
-<li>Chairing Panel</li>
-<li>Delegate</li>
-</ul>
+<nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="committees.html">Committees</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="apply.html">Apply</a>
+  <a href="team.html">Meet the Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="captures.html">MUN Captures</a>
+</div>
+
+<div class="section">
+  <h1>Apply to UNITY MUN</h1>
+
+  <p>
+    Be part of an unforgettable Model United Nations experience. Whether you are interested in leadership,
+    organization, media, security, or representing a country as a delegate, UNITY MUN offers multiple opportunities
+    to get involved.
+  </p>
+
+  <p>
+    Please review the roles below carefully and apply through the appropriate form.
+  </p>
+
+  <hr>
+
+  <h2>🔐 Security Team Application</h2>
+  <p>
+    For individuals responsible for maintaining order, ensuring safety, and supporting smooth operations throughout
+    the conference.
+  </p>
+  <p>
+    👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeulk6ZTNKRi-Lu3ZflSMVvlfXAIpgJIL9694oatzzx3MWPRg/viewform" target="_blank">
+    Apply here</a>
+  </p>
+
+  <hr>
+
+  <h2>🧑‍💼 Staff Application</h2>
+  <p>
+    For applicants interested in logistics, operations, delegate support, and overall conference management.
+  </p>
+  <p>
+    👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHMJYDI394b_wbKySCsHfWSo_iOhoe-SSJ1IwcfH-Jm9cF6g/viewform" target="_blank">
+    Apply here</a>
+  </p>
+
+  <hr>
+
+  <h2>📸 Media Team Application</h2>
+  <p>
+    For photographers, videographers, designers, and content creators responsible for documenting and promoting UNITY MUN.
+  </p>
+  <p>
+    👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRw5QTEPjmkKT-NJnLyE3OrfZhsPEN2r9bYetxoc7e8e2dFg/viewform" target="_blank">
+    Apply here</a>
+  </p>
+
+  <hr>
+
+  <h2>🎓 Chairing Panel Application</h2>
+  <p>
+    For experienced MUN participants interested in moderating debates, guiding committees, and ensuring academic quality.
+  </p>
+  <p>
+    👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYopxOq8YmtIzVC_cwKucBovpaqyOD2V1ywnMKm4uSLbDAAA/viewform" target="_blank">
+    Apply here</a>
+  </p>
+
+  <hr>
+
+  <h2>🌍 Delegate Application</h2>
+  <p>
+    For students who wish to represent a country, engage in diplomacy, debate global issues, and draft resolutions.
+  </p>
+  <p>
+    👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6ipSwT4L86VFKOh5e5tqAc9h-XPTDQAeoCTbrVVv7vCi_dQ/viewform" target="_blank">
+    Apply here</a>
+  </p>
+
+  <hr>
+
+  <p><strong>📌 Important Note:</strong><br>
+    Applicants should apply to only one role. Selected participants will be contacted via email or phone number with
+    further details.
+  </p>
+
 </div>
 
 </body>
