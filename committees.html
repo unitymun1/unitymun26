@@ -6,27 +6,38 @@
 <title>UnityMUN | Committees</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-
+/* ===== FIXED BACKGROUND (IDENTICAL ON ALL PAGES) ===== */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url('images/IMG_0536.jpeg');
-  background-size: 120%; /* zoomed out */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
   background-position: center;
-  background-color: black;
+  background-repeat: no-repeat;
+  z-index: -2;
 }
 
-body::before {
-  content: "";
+.overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0,0,0,0.6);
   z-index: -1;
 }
 
+/* ===== PAGE STYLES ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* ===== NAVBAR ===== */
 nav {
   background-color: rgba(17,17,17,0.9);
   padding: 15px 10%;
@@ -36,8 +47,10 @@ nav {
   border-bottom: 2px solid white;
 }
 
-nav h2 { margin: 0; }
-.menu-icon { font-size: 28px; cursor: pointer; }
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
 
 .menu {
   display: none;
@@ -57,8 +70,12 @@ nav h2 { margin: 0; }
   text-decoration: none;
 }
 
-.menu a:hover { background-color: white; color: black; }
+.menu a:hover {
+  background-color: white;
+  color: black;
+}
 
+/* ===== CONTENT ===== */
 .section {
   max-width: 900px;
   margin: auto;
@@ -66,10 +83,23 @@ nav h2 { margin: 0; }
   line-height: 1.9;
 }
 
-.section h1 { text-align: center; margin-bottom: 40px; }
-.section h2 { margin-top: 40px; }
-.section p { margin-bottom: 15px; }
-hr { margin: 50px 0; border: 1px solid rgba(255,255,255,0.3); }
+.section h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-top: 40px;
+}
+
+.section ul {
+  margin-left: 25px;
+}
+
+hr {
+  margin: 50px 0;
+  border: 1px solid rgba(255,255,255,0.3);
+}
 </style>
 
 <script>
@@ -81,6 +111,11 @@ function toggleMenu() {
 </head>
 
 <body>
+
+<!-- FIXED BACKGROUND -->
+<div class="background"></div>
+<div class="overlay"></div>
+
 <nav>
   <h2>UnityMUN</h2>
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -100,57 +135,81 @@ function toggleMenu() {
   <h1>Committees</h1>
 
   <h2>General Assembly (GA)</h2>
-  <p><strong>Introduction:</strong> The General Assembly is the main deliberative body of the United Nations, bringing together all member states to discuss global challenges, promote international cooperation, and develop solutions through diplomacy and dialogue.</p>
-  <p><strong>Topics:</strong></p>
+  <p><strong>Introduction</strong><br>
+  The General Assembly is the main deliberative body of the United Nations, bringing together all member states to discuss global challenges, promote international cooperation, and develop solutions through diplomacy and dialogue.</p>
+
+  <p><strong>Topics</strong></p>
   <ul>
-    <li>The Impact of Modern Technology on the International Community<br>Examining how technological advancements affect global security, economic development, communication, and international relations.</li>
-    <li>Regulation of Autonomous Weapons Systems<br>Addressing the ethical, legal, and security implications of autonomous weapons and the need for international regulation.</li>
+    <li><strong>The Impact of Modern Technology on the International Community</strong><br>
+    Examining how technological advancements affect global security, economic development, communication, and international relations.</li>
+    <li><strong>Regulation of Autonomous Weapons Systems</strong><br>
+    Addressing the ethical, legal, and security implications of autonomous weapons and the need for international regulation.</li>
   </ul>
+
   <hr>
 
   <h2>Human Rights Council (HRC)</h2>
-  <p><strong>Introduction:</strong> The Human Rights Council is responsible for promoting and protecting human rights around the world. Delegates work to address violations, strengthen accountability, and ensure dignity and equality for all.</p>
-  <p><strong>Topics:</strong></p>
+  <p><strong>Introduction</strong><br>
+  The Human Rights Council is responsible for promoting and protecting human rights around the world.</p>
+
+  <p><strong>Topics</strong></p>
   <ul>
-    <li>Accountability and Responsibility Toward Syrian Refugees Under International Human Rights Frameworks<br>Assessing international obligations and shared responsibility for the protection and rights of Syrian refugees.</li>
-    <li>Artificial Intelligence and the Protection of Workers’ Rights<br>Exploring the impact of AI on employment, labor rights, and the future of work.</li>
+    <li><strong>Accountability and Responsibility Toward Syrian Refugees Under International Human Rights Frameworks</strong><br>
+    Assessing international obligations and shared responsibility for the protection and rights of Syrian refugees.</li>
+    <li><strong>Artificial Intelligence and the Protection of Workers’ Rights</strong><br>
+    Exploring the impact of AI on employment, labor rights, and the future of work.</li>
   </ul>
+
   <hr>
 
   <h2>Security Council (SC)</h2>
-  <p><strong>Introduction:</strong> The Security Council is tasked with maintaining international peace and security. It addresses conflicts, imposes sanctions, and authorizes peacekeeping operations to respond to global threats.</p>
-  <p><strong>Topics:</strong></p>
+  <p><strong>Introduction</strong><br>
+  The Security Council is tasked with maintaining international peace and security.</p>
+
+  <p><strong>Topics</strong></p>
   <ul>
-    <li>NATO–Russia Rising Tensions in the Black Sea<br>Analyzing escalating geopolitical tensions and their implications for regional and global security.</li>
-    <li>UNSC Sanctions and Their Global Impacts on Security and Effectiveness<br>Evaluating the effectiveness of sanctions and their consequences on international stability and humanitarian conditions.</li>
+    <li><strong>NATO–Russia Rising Tensions in the Black Sea</strong><br>
+    Analyzing escalating geopolitical tensions and their implications for regional and global security.</li>
+    <li><strong>UNSC Sanctions and Their Global Impacts on Security and Effectiveness</strong><br>
+    Evaluating the effectiveness of sanctions and their consequences on international stability and humanitarian conditions.</li>
   </ul>
+
   <hr>
 
   <h2>International Criminal Court (ICC)</h2>
-  <p><strong>Introduction:</strong> The International Criminal Court seeks justice for victims of the gravest crimes under international law, including genocide, crimes against humanity, and war crimes.</p>
-  <p><strong>Topics:</strong></p>
+  <p><strong>Introduction</strong><br>
+  The International Criminal Court seeks justice for victims of genocide, crimes against humanity, and war crimes.</p>
+
+  <p><strong>Topics</strong></p>
   <ul>
-    <li>Ensuring Accountability for Crimes Against Humanity: The Case of Saif al-Islam Gaddafi<br>Discussing legal challenges and international efforts to ensure accountability.</li>
-    <li>Child Soldier Recruitment and International Justice: Lessons from Thomas Lubanga Dyilo<br>Examining international legal responses to the recruitment and use of child soldiers.</li>
+    <li><strong>Ensuring Accountability for Crimes Against Humanity: The Case of Saif al-Islam Gaddafi</strong></li>
+    <li><strong>Child Soldier Recruitment and International Justice: Lessons from Thomas Lubanga Dyilo</strong></li>
   </ul>
+
   <hr>
 
   <h2>Jordanian House of Representatives (مجلس النواب الأردني)</h2>
-  <p><strong>Introduction:</strong> This committee simulates the Jordanian legislative body, focusing on national policymaking, legal reform, and issues directly affecting Jordan’s society and economy.</p>
-  <p><strong>المواضيع:</strong></p>
+  <p><strong>Introduction</strong><br>
+  This committee simulates the Jordanian legislative body.</p>
+
+  <p><strong>المواضيع</strong></p>
   <ul>
-    <li>قانون الجرائم الإلكترونية وتنظيم المحتوى الرقمي<br>مناقشة التشريعات المتعلقة بالجرائم الإلكترونية وضبط المحتوى الرقمي.</li>
-    <li>الطاقة المتجددة وتقليل كلفة الطاقة<br>بحث سبل دعم الطاقة المتجددة وخفض تكاليف الطاقة على الدولة والمواطنين.</li>
+    <li>قانون الجرائم الإلكترونية وتنظيم المحتوى الرقمي</li>
+    <li>الطاقة المتجددة وتقليل كلفة الطاقة</li>
   </ul>
+
   <hr>
 
   <h2>INTERPOL</h2>
-  <p><strong>Introduction:</strong> INTERPOL facilitates international police cooperation to combat transnational crime and enhance global security through coordination and information sharing.</p>
-  <p><strong>Topics:</strong></p>
+  <p><strong>Introduction</strong><br>
+  INTERPOL facilitates international police cooperation.</p>
+
+  <p><strong>Topics</strong></p>
   <ul>
-    <li>Crime Prevention and Criminal Justice<br>Strengthening international cooperation in crime prevention and justice systems.</li>
-    <li>Cybercrime<br>Addressing digital threats, online criminal activity, and cross-border cyber security challenges.</li>
+    <li>Crime Prevention and Criminal Justice</li>
+    <li>Cybercrime</li>
   </ul>
+
 </div>
 
 </body>
