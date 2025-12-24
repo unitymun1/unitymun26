@@ -4,35 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UnityMUN | Home</title>
-
 <style>
-/* Global Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white; /* TEXT COLOR */
-
-  background-image: url('images/IMG_0536.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: black;
-}
-
-/* Dark overlay */
-body::before {
-  content: "";
+/* ===== FIXED BACKGROUND ===== */
+.background {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/IMG_0536.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
   z-index: -1;
 }
 
-/* Navbar */
+/* ===== BASE STYLES ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* ===== NAVBAR ===== */
 nav {
   background-color: rgba(17,17,17,0.9);
   padding: 15px 10%;
@@ -44,16 +48,13 @@ nav {
 
 nav h2 {
   margin: 0;
-  color: white;
 }
 
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
-  color: white;
 }
 
-/* Dropdown menu */
 .menu {
   display: none;
   position: absolute;
@@ -77,7 +78,7 @@ nav h2 {
   color: black;
 }
 
-/* Section content */
+/* ===== SECTION ===== */
 .section {
   max-width: 900px;
   margin: 0 auto;
@@ -86,26 +87,15 @@ nav h2 {
   text-align: center;
 }
 
-.section h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.section h2 {
-  font-size: 28px;
-  margin-top: 40px;
-}
-
-.section p {
+.section h1, .section h2 {
   margin-bottom: 20px;
 }
 
 hr {
   border: 1px solid white;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 </style>
-
 <script>
 function toggleMenu() {
   const menu = document.getElementById("menu");
@@ -113,8 +103,9 @@ function toggleMenu() {
 }
 </script>
 </head>
-
 <body>
+<div class="background"></div>
+<div class="overlay"></div>
 
 <nav>
   <h2>UnityMUN</h2>
@@ -133,45 +124,12 @@ function toggleMenu() {
 
 <div class="section">
   <h1>What Is UNITY MUN?</h1>
-
-  <p>
-    UNITY MUN is a Model United Nations; it is a student-led academic conference dedicated to empowering students.
-    It also brings nations together through dialogue. It is built on the belief that dialogue and cooperation
-    are essential in addressing today’s global challenges. UNITY MUN provides a dynamic platform where delegates
-    engage in meaningful debate, critical thinking, and collaborative problem-solving.
-  </p>
-
-  <p>
-    At UNITY MUN, participants represent countries and international actors as they simulate real United Nations
-    committees, debate pressing global issues, and work together to craft innovative, realistic solutions.
-    Our conference emphasizes respectful discourse, inclusivity, and academic excellence, ensuring a supportive
-    environment for both first-time and experienced delegates.
-  </p>
-
-  <p>
-    Guided by the core values of unity, integrity, and diplomacy, UNITY MUN aims to empower students with the skills
-    needed to lead in an increasingly interconnected world. Through debate, diplomacy, and cooperation,
-    UNITY MUN prepares delegates to become informed global citizens and confident future leaders.
-  </p>
-
-  <p>
-    We would love it if you join us in shaping conversations that matter and building unity through dialogue.
-  </p>
-
+  <p>UNITY MUN (Model United Nations) is an educational simulation that brings together students and youth to engage in diplomacy, debate, and international relations. Participants represent countries, organizations, and institutions as they discuss real global issues, negotiate solutions, and work collaboratively to draft resolutions.</p>
+  <p>UNITY MUN aims to empower young leaders by enhancing critical thinking, public speaking, leadership, and negotiation skills in a professional and inclusive environment that reflects the values of unity, dialogue, and global cooperation.</p>
   <hr>
-
   <h2>Theme: Voices of the Generation</h2>
-
-  <p>
-    Voices of the Generation represents the power of youth in shaping the present and the future.
-    This theme highlights the importance of giving young people a platform to express their ideas,
-    concerns, and solutions to global challenges.
-  </p>
-
-  <p>
-    Through this theme, UNITY MUN encourages delegates to speak up, take responsibility,
-    and use their voices to promote change, innovation, and unity in an ever-evolving world.
-  </p>
+  <p>Voices of the Generation represents the power of youth in shaping the present and the future. This theme highlights the importance of giving young people a platform to express their ideas, concerns, and solutions to global challenges.</p>
+  <p>Through this theme, UNITY MUN encourages delegates to speak up, take responsibility, and use their voices to promote change, innovation, and unity in an ever-evolving world.</p>
 </div>
 
 </body>
