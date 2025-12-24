@@ -1,21 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>UnityMUN | Team</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnityMUN | Meet the Team</title>
+
 <style>
-body{color:white;background:url('images/IMG_0536.jpeg') center/cover fixed black;margin:0;font-family:Arial}
-body::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:-1}
-.section{max-width:900px;margin:auto;padding:60px 20px}
+/* ===== FIXED BACKGROUND (SAME SIZE ON ALL PAGES) ===== */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/IMG_0536.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background-color: rgba(17,17,17,0.9);
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  background-color: rgba(17,17,17,0.95);
+  border: 1px solid white;
+  width: 230px;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ===== CONTENT ===== */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+  line-height: 1.9;
+}
+
+.section h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin-top: 40px;
+}
+
+.section h3 {
+  margin-top: 15px;
+}
+
+hr {
+  margin: 50px 0;
+  border: 1px solid rgba(255,255,255,0.3);
+}
 </style>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 </head>
+
 <body>
 
+<!-- BACKGROUND -->
+<div class="background"></div>
+<div class="overlay"></div>
+
+<nav>
+  <h2>UnityMUN</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="committees.html">Committees</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="apply.html">Apply</a>
+  <a href="team.html">Meet the Team</a>
+  <a href="contact.html">Contact</a>
+  <a href="captures.html">MUN Captures</a>
+</div>
+
 <div class="section">
-<h1>Meet the Leadership Team</h1>
-<p><strong>Secretary-General:</strong> Celina Zakaria</p>
-<p><strong>Deputy Secretary-General:</strong> Saif Maghairah</p>
+  <h1>Meet the Leadership Team</h1>
+
+  <p>
+    At UNITY MUN, our leadership team is dedicated to creating a professional,
+    engaging, and impactful Model United Nations experience. With a shared
+    commitment to diplomacy, teamwork, and excellence, the Secretariat works
+    tirelessly to ensure the success of the conference.
+  </p>
+
+  <hr>
+
+  <h2>Secretary-General</h2>
+  <h3>Celina Zakaria</h3>
+  <p>
+    The Secretary-General oversees all aspects of the conference, providing
+    vision, leadership, and strategic direction to ensure UNITY MUN upholds
+    the highest standards of academic and organizational excellence.
+  </p>
+
+  <hr>
+
+  <h2>Deputy Secretary-General</h2>
+  <h3>Saif Maghairah</h3>
+  <p>
+    The Deputy Secretary-General supports the overall management of the
+    conference, coordinating with committees and teams to ensure smooth
+    operations and an exceptional delegate experience.
+  </p>
 </div>
 
 </body>
